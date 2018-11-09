@@ -1,0 +1,9 @@
+Create Account
+Create Project -->
+  Projects are good way to organize and manage the project in different env.
+  
+  Each project has 3 identifiers -->
+    Project name --> Human friendly/readable, to identify the project easily
+    Project ID --> Created by User, globally unique, and can be used in Cloud SDK
+    Project number --> Google created globally generated unique ID/number
+  
