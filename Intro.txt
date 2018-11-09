@@ -26,9 +26,89 @@ GCDS --> service that allows you to sync AD or LDAP.
      
 Roles --> One of the way to give permissions to members to perform any activity.
 Types of Roles --> 3 types
-1. Primitive Roles --> Project Owner, Project viewer, Project Editor
-2. Predefined Roles --> more granular and service specific roles (example: ML Engine Developer)
-3. Custom Roles --> Created by Admin, Same functionality as predefined roles. (example: Role Name: View ML jobs, Permissions: ml.jobs.list)
+1. Primitive Roles --> (project level) Project Owner, Project viewer, Project Editor 
+2. Predefined Roles --> (resource level) more granular and service specific roles (example: ML Engine Developer) 
+3. Custom Roles --> (resource level) Created by Admin, Same functionality as predefined roles. (example: Role Name: View ML jobs, Permissions: ml.jobs.list)
 
+Enable APIs --> This allows us to select any available API from Library to select and enable for Application.
+API can be public or Private and can be ditributed in different categories.
+
+API Overview window provides details about API performance and activity happening at API.
+you can filter result by API versions, API methods, API response codes.
+
+API Quota --> will inform us about monthly / yearly quota limit.
+
+GCP allows user to Explore APIs using API Explorer -->
+  you can select different API versions, and pass input to that API using browser and then check the result.
+
+Cloud Shell --> Is also one one the awesome feature of GCP, which is Shell window in broswer.
+
+In-order to use any API we need API credentials --> (Need to check this later)
+
+Stackdriver --> Google's monitoring and logging service. It can monitor one or more projects.
+It contains various services like, monitoring, logging, debug, trace, error reporting, profiler.
+
+Groups --> we can create groups to monitor services together that are used in specific project.
+
+Application Performance Management (APM) --> 
+
+Host Project are common pratice to monitor projects in StackDriver.
+Best practice recommendation --> 
+  if you are using only 1 project to monitor, you can use same project as Host project.
+  But if you using StackDriver to monitor multiple project together then you need to create Host Project (an empty project) and add your existing project into it to monitor.
+  
+Summary -->
+Resources --> Compute Enginer, Cloud Storage, App Engine, etc. 
+Services --> These resources combines and makes up a services.
+1. Project --> Services and Resources attached to a project. 
+        --> Projects can have Add members, enable billing, Manage Roles, and all other needed resources.
+    --> Everything is attached to a project but structure of project depends on need of Organization.
+      example, one can create multiple project under one application or one application per project.
+           --> one can create per project per department or per functionality of application or per team like dev, test and prod.
+2. IAM (Users and Roles) --> Who can do what with which resource. 
+      Users has to be somehow associated with Google.
+3. Manage APIs --> using Console, SDK
+4. StackDriver --> 
+
+
+Create Billing Account --> consist of Payment methods, permissions (Billing Roles) and can be attach to one or more projects.
+We can create as many billing account as we want and attach them to as many projects as we want.
+
+
+When will be billed? Depends on how we use.
+1. Self-serve accounts --> monthly or billed at threshold. By default account is of this type.
+2. Invoiced --> Billed monthly, Check / Wire Transfer/ contact Google Cloud Sales team to set-up this.
+
+Who have access to Billing Info --> depends on Role 
+Primitive Role --> Owner
+Predefined --> (Billing Viewer, User, Admin)
+Custom Roles --> 
+
+Create Budgets & Alert --> manage our budget
+Budgets --> can be created based on Billing Account level or Project level.
+Alerts --> can be set based on percentage of budget or specific Amount. (trigger notification)
+
+Notifications can be received by pub/sub topic to this budget.
+
+Below are few of the info that can be seen in Notification --> in JSON format
+ --> BudgetDisplayName
+ alertThresholdExceed
+ costAmount
+ costIntervalStart
+ budgetrAmount
+ budgetAmountType
+ currentCode
+
+Billing Export --> two ways 
+    BigQuery export --> more detailed info, allows to query using BigQuery. Analysis reports can be created on top of it.
+    File Export --> in CSV or JSON file format, can be saved at Cloud Storage bucket everyday. few less info then BigQuery. little cheap as well. One file per day.
+    
+Cloud Storage Bucket --> (very similar to AWS S3)
+  Bucket name --> global unique name
+  different storage classes --> Multi-regional, regional, Nearline, Coldline
+  Location --> us-west1
+  pricing --> depends on Storage-Cost, retrieval cost, class A operations, class B operations
+  
 
   
+
