@@ -4,6 +4,31 @@ Create Project -->
   
   Each project has 3 identifiers -->
     Project name --> Human friendly/readable, to identify the project easily
-    Project ID --> Created by User, globally unique, and can be used in Cloud SDK
+    Project ID --> Created by User, globally unique, and can be used in Cloud SDK, CLI, etc
     Project number --> Google created globally generated unique ID/number
+
+IAM --> to add members and set multiple roles to that member.
+Members email id must be somehow linked to Google in-order to add that email as a member in the project.
+
+IAM doesn't serve as an Identity provider.
+IAM serves as Who can do what and to which GCP resource. However who needs to be known to Google somehow.
+
+One of the following can become a member:
+1. Google account email
+2. google group email
+3. service account
+4. Gsuit domain
+
+GSuit (earlier called as Google Apps for work) --> gives businesses access to email, drives, etc
+Cloud Identity --> identity provider aspect of GSuit without the rest of the Gsuit apps
+GCDS --> service that allows you to sync AD or LDAP.
+     --> Its possible to use any other identity provider if its supported by G cloud directory sink (GCDS). you can sync users with Active Directory or an LDAP server.
+     
+Roles --> One of the way to give permissions to members to perform any activity.
+Types of Roles --> 3 types
+1. Primitive Roles --> Project Owner, Project viewer, Project Editor
+2. Predefined Roles --> more granular and service specific roles (example: ML Engine Developer)
+3. Custom Roles --> Created by Admin, Same functionality as predefined roles. (example: Role Name: View ML jobs, Permissions: ml.jobs.list)
+
+
   
