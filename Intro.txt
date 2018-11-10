@@ -109,6 +109,21 @@ Cloud Storage Bucket --> (very similar to AWS S3)
   Location --> us-west1
   pricing --> depends on Storage-Cost, retrieval cost, class A operations, class B operations
   
+Cloud SDK --> consist of components
+    --> Gcloud
+    --> Alpha
+    --> Beta
+    --> BigQuery
+    --> GSutIL
+    --> Core
+    
+    gcloud SDK command structures -->
+    gcloud <optional flags> <group | commands>
+    here <group | commands> --> example, ml-engine, iam, projects, etc.
+    commands --> list, get, etc
+    
+    example: $ gcloud auth list, or $ gcloud config list
+
 
   
 
